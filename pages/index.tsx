@@ -7,9 +7,11 @@ import Technologies from "../components/Technologies";
 
 function index() {
   return (
-    <div className="lg:px-28 xl:px-[15%] pb-20">
-      <HeroText />
-      <div className="flex flex-col mt-36">
+    <div className="pb-20">
+      <div className="lg:px-28 xl:px-[15%]">
+        <HeroText />
+      </div>
+      <div className="flex flex-col mt-36 lg:flex-row lg:justify-between lg:px-14 xl:px-[15%]">
         <RecentAccomplishments />
         <Experiences />
         <Technologies />

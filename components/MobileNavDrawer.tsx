@@ -34,7 +34,7 @@ function MobileNavDrawer({ open, setOpen }: Props) {
         </div>
         <motion.div
           variants={Animation.Stagger}
-          className="flex flex-col justify-center mt-20 h-full gap-16"
+          className="flex flex-col justify-center h-full gap-16"
         >
           <div className="text-white dark:text-black flex justify-center items-center text-5xl font-semibold overflow-hidden">
             <motion.div variants={Animation.TextSlideUpSkew}>
