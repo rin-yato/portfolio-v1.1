@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
     },
   };
   return (
-    <div>
+    <div className="bg-[#F6F6F6]">
       <Header />
       <AnimatePresence mode="wait">
         <motion.div

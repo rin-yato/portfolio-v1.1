@@ -34,6 +34,10 @@ body {
   font-weight: 300;
 }
 
+html, body, * {
+  overscroll-behavior: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
