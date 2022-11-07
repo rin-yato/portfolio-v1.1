@@ -18,7 +18,7 @@ function MobileNavDrawer({ open, setOpen }: Props) {
       animate="animate"
       exit="exit"
       variants={Animation.NavBarDrawer}
-      className={`bg-black fixed top-0 bottom-0 left-0 right-0 dark:bg-white w-full`}
+      className={`bg-black fixed top-0 bottom-0 left-0 right-0 z-50 dark:bg-white w-full`}
     >
       <div className="flex flex-col px-7 py-7 h-full">
         <div className=" flex justify-end">
@@ -38,12 +38,16 @@ function MobileNavDrawer({ open, setOpen }: Props) {
         >
           <div className="text-white dark:text-black flex justify-center items-center text-5xl font-semibold overflow-hidden">
             <motion.div variants={Animation.TextSlideUpSkew}>
-              <Link href={"/"}>Home</Link>
+              <Link href={"/"} onClick={() => setOpen(false)}>
+                Home
+              </Link>
             </motion.div>
           </div>
           <div className="text-white dark:text-black flex justify-center items-center text-5xl font-semibold overflow-hidden">
             <motion.div variants={Animation.TextSlideUpSkew}>
-              <Link href={"/"}>Me</Link>
+              <Link href={"/me"} onClick={() => setOpen(false)}>
+                Me
+              </Link>
             </motion.div>
           </div>
           <div className="text-white dark:text-black flex justify-center items-center text-5xl font-semibold overflow-hidden">

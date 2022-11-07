@@ -5,7 +5,7 @@ function IntroToDK() {
     <div className="px-8 md:px-20 lg:px-0 my-10 lg:w-1/3">
       <div className="flex flex-col">
         <h2 className="font-[400] text-base mb-5 uppercase tracking-wider">
-          Daily Kicks
+          Project :<span className="text-indigo-600 font-medium"> Daily Kicks</span> 
         </h2>
         <div className="flex flex-col gap-4 text-[16px] text-slate-600">
           <h3 className="leading-6">
