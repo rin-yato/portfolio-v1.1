@@ -60,7 +60,9 @@ function MobileNavDrawer({ open, setOpen }: Props) {
           </div>
           <div className="text-white dark:text-black flex justify-center items-center text-5xl font-semibold overflow-hidden">
             <motion.div variants={Animation.TextSlideUpSkew}>
-              <Link href={"/"}>Contact</Link>
+              <a href="https://t.me/rinyato" onClick={() => setOpen(false)}>
+                Contact
+              </a>
             </motion.div>
           </div>
         </motion.div>

@@ -3,7 +3,12 @@ import React from "react";
 import { useRouter } from "next/router";
 import MobileNav from "./MobileNav";
 
-function Header() {
+interface Props {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Header({ open, setOpen }: Props) {
   const [page, setPage] = React.useState("home");
   return (
     <div className="flex justify-between items-center px-7 py-7 lg:px-16 lg:py-10 ">
@@ -41,12 +46,12 @@ function Header() {
           ></span>
         </div>
         <div className="relative">
-          <Link
-            href={"/"}
+          <a
+            href="https://t.me/rinyato"
             className=" font-medium hover:text-slate-300 duration-300"
           >
             CONTACT
-          </Link>
+          </a>
           <span
             className={`${
               page === "contact" ? "" : "hidden"
@@ -55,7 +60,7 @@ function Header() {
         </div>
         {/* <--End--> */}
       </div>
-      <MobileNav />
+      <MobileNav open={open} setOpen={setOpen} />
     </div>
   );
 }

@@ -4,8 +4,12 @@ import { ButtonBase } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import MobileNavDrawer from "./MobileNavDrawer";
 
-function MobileNav() {
-  const [open, setOpen] = useState<boolean>(false);
+interface Props {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function MobileNav({ open, setOpen }: Props) {
 
   return (
     <div className="md:hidden lg:hidden">
