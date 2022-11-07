@@ -19,8 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
       opacity: 0,
     },
   };
+  open ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "auto");
   return (
-    <div className={`bg-[#F6F6F6] ${open ? "overflow-hidden h-screen" : ""}`}>
+    <div className={`bg-[#F6F6F6]`}>
       <Header open={open} setOpen={setOpen} />
       <AnimatePresence mode="wait">
         <motion.div
