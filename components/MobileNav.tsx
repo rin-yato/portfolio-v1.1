@@ -7,9 +7,11 @@ import MobileNavDrawer from "./MobileNavDrawer";
 interface Props {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  page: string;
+  setPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function MobileNav({ open, setOpen }: Props) {
+function MobileNav({ open, setOpen, page, setPage }: Props) {
 
   return (
     <div className="md:hidden lg:hidden">
@@ -21,7 +23,9 @@ function MobileNav({ open, setOpen }: Props) {
           <MobileNavDrawer
             open={open}
             setOpen={setOpen}
-            key={"MobileNavDrawer"}
+            key={ "MobileNavDrawer" }
+            page={ page }
+            setPage={ setPage }
           />
         )}
       </AnimatePresence>

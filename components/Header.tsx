@@ -60,7 +60,7 @@ function Header({ open, setOpen }: Props) {
         </div>
         {/* <--End--> */}
       </div>
-      <MobileNav open={open} setOpen={setOpen} />
+      <MobileNav open={ open } setOpen={ setOpen } page={ page } setPage={ setPage } />
     </div>
   );
 }

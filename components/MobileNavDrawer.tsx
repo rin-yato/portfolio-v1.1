@@ -9,9 +9,11 @@ import Transition from "../FramerMotion/Transition";
 interface Props {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  page: string;
+  setPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function MobileNavDrawer({ open, setOpen }: Props) {
+function MobileNavDrawer({ open, setOpen, page, setPage }: Props) {
   return (
     <motion.div
       initial="initial"
@@ -38,14 +40,26 @@ function MobileNavDrawer({ open, setOpen }: Props) {
         >
           <div className="text-white dark:text-black flex justify-center items-center text-5xl font-semibold overflow-hidden">
             <motion.div variants={Animation.TextSlideUpSkew}>
-              <Link href={"/"} onClick={() => setOpen(false)}>
+              <Link
+                href={"/"}
+                onClick={() => {
+                  setOpen(false);
+                  setPage("home");
+                }}
+              >
                 Home
               </Link>
             </motion.div>
           </div>
           <div className="text-white dark:text-black flex justify-center items-center text-5xl font-semibold overflow-hidden">
             <motion.div variants={Animation.TextSlideUpSkew}>
-              <Link href={"/me"} onClick={() => setOpen(false)}>
+              <Link
+                href={"/me"}
+                onClick={() => {
+                  setOpen(false);
+                  setPage("me");
+                }}
+              >
                 Me
               </Link>
             </motion.div>

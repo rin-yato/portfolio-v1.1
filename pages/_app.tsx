@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import Header from "../components/Header";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [open, setOpen] = useState<boolean>(false);
@@ -19,7 +19,13 @@ export default function App({ Component, pageProps }: AppProps) {
       opacity: 0,
     },
   };
-  open ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "auto");
+
+  useEffect(() => {
+    open
+      ? document.body.classList.add("overflow-hidden")
+      : document.body.classList.remove("overflow-hidden");
+  }, [open]);
+
   return (
     <div className={`bg-[#F6F6F6]`}>
       <Header open={open} setOpen={setOpen} />
