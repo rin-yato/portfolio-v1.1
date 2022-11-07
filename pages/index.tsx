@@ -86,6 +86,7 @@ function index({ open, setOpen }: Props) {
               src={require("../public/web/003.png")}
               alt="idk"
               className="scale-150 md:scale-100 rounded-lg"
+              placeholder="blur"
             />
           </div>
           <p className="font-[400] text-center py-16 text-3xl">Interested?</p>
