@@ -9,7 +9,19 @@ interface Props {
 }
 
 function Header({ open, setOpen }: Props) {
+  const router = useRouter();
+  const currentPage = router.pathname;
   const [page, setPage] = React.useState("home");
+
+  React.useEffect(() => {
+    if (currentPage === "/") {
+      setPage("home");
+    }
+    if (currentPage === "/me") {
+      setPage("me");
+    }
+  }, [currentPage]);
+
   return (
     <div className="flex justify-between items-center px-7 py-7 lg:px-16 lg:py-10 ">
       <div>
