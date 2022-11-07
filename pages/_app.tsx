@@ -4,9 +4,11 @@ import Header from "../components/Header";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Preloader from "../components/Preloader";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [open, setOpen] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const router = useRouter();
   const FramerMotionPageTransition = {
     initial: {
@@ -28,6 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className={`bg-[#F6F6F6]`}>
+      {loading && <Preloader loading={loading} setLoading={setLoading} />}
       <Header open={open} setOpen={setOpen} />
       <AnimatePresence mode="wait">
         <motion.div

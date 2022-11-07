@@ -26,6 +26,12 @@
   font-weight: 700; 
 }
 
+@font-face {
+  font-family: 'Noto Sans Khmer';
+  src: url('../public/font/Noto_Sans_Khmer/NotoSansKhmer-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: 300; 
+}
+
 html,
 body {
   padding: 0;
@@ -60,6 +66,10 @@ a {
 
 .hero-text > span {
   font-weight: 400;
+}
+
+.khmer {
+  font-family: 'Noto Sans Khmer';
 }
 
 
