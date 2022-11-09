@@ -33,6 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <div className={`bg-[#F6F6F6]`}>
+      {loading && <Preloader loading={loading} setLoading={setLoading} />}
       <ScrollContainer>
         <Header open={open} setOpen={setOpen} />
         <Head key={"head"}>
@@ -44,7 +45,6 @@ export default function App({ Component, pageProps }: AppProps) {
           />
           <link rel="icon" href="/favicon.png" />
         </Head>
-        {loading && <Preloader loading={loading} setLoading={setLoading} />}
         <AnimatePresence mode="wait">
           <motion.div
             key={router.route}

@@ -20,7 +20,7 @@ function MobileNavDrawer({ open, setOpen, page, setPage }: Props) {
       animate="animate"
       exit="exit"
       variants={Animation.NavBarDrawer}
-      className={`bg-black fixed top-0 bottom-0 left-0 right-0 z-50 dark:bg-white h-screen`}
+      className={`bg-black fixed top-0 bottom-0 left-0 right-0 z-50 pb-16 dark:bg-white h-screen`}
     >
       <div className="flex flex-col px-7 py-7 h-full">
         <div className=" flex justify-end">
