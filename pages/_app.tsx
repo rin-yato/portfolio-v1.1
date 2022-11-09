@@ -3,24 +3,15 @@ import type { AppProps } from "next/app";
 import Header from "../components/Header";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { useEffect, useRef, useState } from "react";
 import Preloader from "../components/Preloader";
 import Head from "next/head";
-import ResizeObserver from "resize-observer-polyfill";
 import ScrollContainer from "../components/ScrollContainer";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-  const app = useRef<HTMLDivElement>(null);
-  const scrollContainer = useRef<HTMLDivElement>(null);
 
   const FramerMotionPageTransition = {
     initial: {
@@ -53,7 +44,7 @@ export default function App({ Component, pageProps }: AppProps) {
           />
           <link rel="icon" href="/favicon.png" />
         </Head>
-        {/* {loading && <Preloader loading={loading} setLoading={setLoading} />} */}
+        {loading && <Preloader loading={loading} setLoading={setLoading} />}
         <AnimatePresence mode="wait">
           <motion.div
             key={router.route}

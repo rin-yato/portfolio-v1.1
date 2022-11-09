@@ -20,7 +20,7 @@ const ScrollContainer = ({ children, scrollIntertia }: Props) => {
       mass: 1,
       tension: 200,
       friction: 35,
-      precision: 0.00001,
+      precision: 0.0001,
       velocity: 0,
       clamp: true,
     },
