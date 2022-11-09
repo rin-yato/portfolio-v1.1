@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [open]);
 
   return (
-    <div ref={app} className={`bg-[#F6F6F6]`}>
+    <div className={`bg-[#F6F6F6]`}>
       <ScrollContainer>
         <Header open={open} setOpen={setOpen} />
         <Head key={"head"}>
