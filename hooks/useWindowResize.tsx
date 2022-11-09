@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 type windowSize = {
   width?: number;
@@ -6,6 +7,7 @@ type windowSize = {
 };
 
 function useWindowResize() {
+  const router = useRouter();
   function getSize() {
     return {
       width: window.innerWidth,
@@ -27,6 +29,7 @@ function useWindowResize() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
 
   return windowSize;
 }

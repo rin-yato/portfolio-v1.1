@@ -72,4 +72,10 @@ a {
   font-family: 'Noto Sans Khmer';
 }
 
+.scroll-container {
+  position: fixed;
+  will-change: transform;
+  right: 0;
+  left: 0;
+}
 
