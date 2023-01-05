@@ -14,7 +14,7 @@ function Preloader({ loading, setLoading }: Props) {
       }, 20);
     }
   }, [loadingTime]);
-  
+
   React.useEffect(() => {
     if (loadingTime === 100) {
       setTimeout(() => {
@@ -28,8 +28,25 @@ function Preloader({ loading, setLoading }: Props) {
         loadingTime > 120 ? "opacity-0" : ""
       } duration-500 ease-in-out`}
     >
-      <div className="khmer text-slate-600 text-3xl md:text-5xl lg:text-7xl">ចាំតិច ហើយឡូវហើយ!</div>
-      <div className="text-slate-600 text-3xl md:text-5xl lg:text-7xl mt-5 lg:mt-36">%{loadingTime <= 100 ? loadingTime : '100'}</div>
+      <div>
+        <div
+          className={`text-slate-600 text-5xl py-10 duration-[4s] ${
+            loadingTime > 2 ? "opacity-0" : ""
+          }`}
+        >
+          Site is loading...
+        </div>
+        <div
+          className={`khmer text-slate-600 pl-2 text-2xl duration-[4s] ${
+            loadingTime > 2 ? "opacity-0" : ""
+          }`}
+        >
+          ចាំតិច ហើយឡូវហើយ!
+        </div>
+      </div>
+      <div className="fixed left-10 bottom-10 text-slate-600 text-3xl md:text-5xl lg:text-7xl mt-5 lg:mt-36">
+        %{loadingTime <= 100 ? loadingTime : "100"}
+      </div>
     </div>
   );
 }
