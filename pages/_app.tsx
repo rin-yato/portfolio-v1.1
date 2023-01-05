@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
+  const scrollContainer = useRef(null);
 
   const FramerMotionPageTransition = {
     initial: {
@@ -26,6 +27,9 @@ export default function App({ Component, pageProps }: AppProps) {
   };
 
   useEffect(() => {
+    open
+      ? document.body.classList.add("overflow-hidden")
+      : document.body.classList.remove("overflow-hidden");
     open
       ? document.body.classList.add("overflow-hidden")
       : document.body.classList.remove("overflow-hidden");
@@ -51,7 +55,7 @@ export default function App({ Component, pageProps }: AppProps) {
             initial="initial"
             animate="animate"
             exit="exit"
-            whileInView="whileInView"
+            // whileInView="whileInView"
             whileTap="whileTap"
             whileHover="whileHover"
             variants={FramerMotionPageTransition}

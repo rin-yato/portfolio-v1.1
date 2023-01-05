@@ -9,6 +9,8 @@ import RecentAccomplishments from "../components/RecentAccomplishments";
 import Technologies from "../components/Technologies";
 import Image from "next/image";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
+import { motion } from "framer-motion";
+import Animation from "../FramerMotion/Animation";
 
 interface Props {
   open: boolean;
@@ -27,10 +29,13 @@ function index({ open, setOpen }: Props) {
         <Technologies />
       </section>
       <section className="mt-36">
-        <div className="lg:flex lg:justify-between lg:items-center  lg:px-28 xl:px-[15%]">
+        <motion.div
+          whileInView={{ transition: { staggerChildren: 0.3 } }}
+          className="lg:flex lg:justify-between lg:items-center  lg:px-28 xl:px-[15%]"
+        >
           <IntroToDK />
           <DKTechnologies />
-        </div>
+        </motion.div>
         <div>
           <div className="lg:w-10/12 py-16 mt-28 lg:mx-auto overflow-hidden">
             <Image
@@ -47,7 +52,6 @@ function index({ open, setOpen }: Props) {
                 <Image
                   src={require("../public/web/04.png")}
                   alt="bruhidk"
-                  // placeholder="blur"
                   priority
                 />
               </div>
@@ -61,7 +65,7 @@ function index({ open, setOpen }: Props) {
                 <Image
                   src={require("../public/web/05.png")}
                   alt="bruhidk"
-                  // placeholder="blur"
+                  priority
                 />
               </div>
               <p className="text-sm text-center pt-7 text-slate-600">
@@ -73,7 +77,6 @@ function index({ open, setOpen }: Props) {
                 <Image
                   src={require("../public/web/06.png")}
                   alt="bruhidk"
-                  // placeholder="blur"
                   priority
                 />
               </div>
@@ -88,7 +91,6 @@ function index({ open, setOpen }: Props) {
               src={require("../public/web/003.png")}
               alt="idk"
               className="scale-150 md:scale-100 rounded-lg lg:-translate-x-14"
-              // placeholder="blur"
               priority
             />
           </div>

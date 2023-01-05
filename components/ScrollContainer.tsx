@@ -10,15 +10,14 @@ import ResizeObserver from "resize-observer-polyfill";
 
 type Props = {
   children: React.ReactNode;
-  scrollIntertia?: number;
 };
 
-const ScrollContainer = ({ children, scrollIntertia }: Props) => {
+const ScrollContainer = ({ children }: Props) => {
   const [{ y }, set] = useSpring(() => ({
     y: [0],
     config: {
       mass: 1,
-      tension: 200,
+      tension: 250,
       friction: 35,
       precision: 0.0001,
       velocity: 0,
@@ -56,7 +55,9 @@ const ScrollContainer = ({ children, scrollIntertia }: Props) => {
   return (
     <>
       <a.div
-        style={{ transform: y.to((y) => `translate3d(0,${y}px,0)`) }}
+        style={{
+          transform: y.to((y) => `translate3d(0,${y}px,0)`),
+        }}
         ref={viewportRef}
         className="scroll-container"
       >
