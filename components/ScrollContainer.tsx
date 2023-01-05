@@ -17,7 +17,7 @@ const ScrollContainer = ({ children }: Props) => {
 
   // Configs
   const data = {
-    ease: 0.08,
+    ease: 0.1,
     current: 0,
     previous: 0,
     rounded: 0,
