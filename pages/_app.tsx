@@ -36,20 +36,20 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [open]);
 
   return (
-    <div className={`bg-[#F6F6F6]`}>
-      {loading && <Preloader loading={loading} setLoading={setLoading} />}
-      <ScrollContainer>
-        <Header open={open} setOpen={setOpen} />
-        <Head key={"head"}>
-          <title>RinYato | Portfolio</title>
-          <meta name="description" content="rinyato portfolio" />
-          <meta
-            name="content"
-            content="rinyato, web developer, web designer, UI/UX, cambodia, khmer"
-          />
-          <link rel="icon" href="/favicon.png" />
-        </Head>
-        <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait">
+      <div className={`bg-[#F6F6F6]`}>
+        {loading && <Preloader loading={loading} setLoading={setLoading} />}
+        <ScrollContainer>
+          <Header open={open} setOpen={setOpen} />
+          <Head key={"head"}>
+            <title>RinYato | Portfolio</title>
+            <meta name="description" content="rinyato portfolio" />
+            <meta
+              name="content"
+              content="rinyato, web developer, web designer, UI/UX, cambodia, khmer"
+            />
+            <link rel="icon" href="/favicon.png" />
+          </Head>
           <motion.div
             key={router.route}
             initial="initial"
@@ -62,8 +62,8 @@ export default function App({ Component, pageProps }: AppProps) {
           >
             <Component {...pageProps} />
           </motion.div>
-        </AnimatePresence>
-      </ScrollContainer>
-    </div>
+        </ScrollContainer>
+      </div>
+    </AnimatePresence>
   );
 }

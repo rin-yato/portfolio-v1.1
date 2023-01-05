@@ -42,7 +42,6 @@ body {
 
 html, body, * {
   overscroll-behavior: none;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -54,16 +53,6 @@ a {
   box-sizing: border-box;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-} */
-
 .hero-text > span {
   font-weight: 400;
 }
@@ -74,7 +63,6 @@ a {
 
 .scroll-container {
   position: fixed;
-  will-change: transform;
   right: 0;
   left: 0;
 }
