@@ -74,7 +74,7 @@ const ScrollContainer = ({ children }: Props) => {
       <div
         ref={scrollContainer}
         style={{
-          transform: `translate3d(0, -${state.scroll}px, 0)`,
+          transform: `translate3d(0, -${state.scroll}px, 0) skewY(${state.skew}deg)`,
         }}
       >
         {children}
