@@ -9,8 +9,6 @@ import RecentAccomplishments from "../components/RecentAccomplishments";
 import Technologies from "../components/Technologies";
 import Image from "next/image";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
-import { motion } from "framer-motion";
-import Animation from "../FramerMotion/Animation";
 
 interface Props {
   open: boolean;
@@ -29,13 +27,10 @@ function index({ open, setOpen }: Props) {
         <Technologies />
       </section>
       <section className="mt-36">
-        <motion.div
-          whileInView={{ transition: { staggerChildren: 0.3 } }}
-          className="lg:flex lg:justify-between lg:items-center  lg:px-28 xl:px-[15%]"
-        >
+        <div className="lg:flex lg:justify-between lg:items-center  lg:px-28 xl:px-[15%]">
           <IntroToDK />
           <DKTechnologies />
-        </motion.div>
+        </div>
         <div>
           <div className="lg:w-10/12 py-16 mt-28 lg:mx-auto overflow-hidden">
             <Image

@@ -1,17 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { once } from "events";
-import Transition from "../FramerMotion/Transition";
 
 function IntroToDK() {
   return (
-    <motion.div
-      initial={{ y: 100, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: .5, ease: Transition.ease4 }}
-      viewport={{ once: true }}
-      className="px-8 md:px-20 lg:px-0 my-10 lg:w-1/3"
-    >
+    <div className="px-8 md:px-20 lg:px-0 my-10 lg:w-1/3">
       <div className="flex flex-col">
         <h2 className="font-[400] text-base mb-5 uppercase tracking-wider">
           Project :
@@ -25,7 +16,7 @@ function IntroToDK() {
           </h3>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

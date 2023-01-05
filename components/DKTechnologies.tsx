@@ -1,16 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Transition from "../FramerMotion/Transition";
 
 function DKTechnologies() {
   return (
-    <motion.div
-      initial={{ y: 100, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: Transition.ease4 }}
-      viewport={{ once: true }}
-      className="px-8 md:px-20 lg:px-0 my-10"
-    >
+    <div className="px-8 md:px-20 lg:px-0 my-10">
       <div className="flex flex-col pt-3">
         <h2 className="font-[400] text-base mb-5 uppercase tracking-wider">
           Technologies used <span className="text-indigo-600">:</span>
@@ -41,7 +33,7 @@ function DKTechnologies() {
           </h3>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
