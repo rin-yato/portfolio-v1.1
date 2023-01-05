@@ -17,7 +17,7 @@ const ScrollContainer = ({ children }: Props) => {
 
   // Configs
   const data = {
-    ease: 0.1,
+    ease: 0.08,
     current: 0,
     previous: 0,
     rounded: 0,
@@ -55,7 +55,7 @@ const ScrollContainer = ({ children }: Props) => {
 
     // Difference between
     const difference = data.current - data.rounded;
-    const acceleration = difference / size.width!;
+    const acceleration = difference / (size.width! < 450 ? 400 : 300);
     const velocity = +acceleration;
     const skew = velocity * 7.5;
 
