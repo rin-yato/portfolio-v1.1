@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import React, { useRef, useState, useEffect } from "react";
-import { setTimeout } from "timers/promises";
 import useWindowSize from "../hooks/useWindowSize";
 
 type Props = {
@@ -17,7 +16,7 @@ const ScrollContainer = ({ children }: Props) => {
 
   // Configs
   const data = {
-    ease: 0.12,
+    ease: 0.1,
     current: 0,
     previous: 0,
     rounded: 0,
@@ -55,7 +54,7 @@ const ScrollContainer = ({ children }: Props) => {
 
     // Difference between
     const difference = data.current - data.rounded;
-    const acceleration = difference / (size.width! < 450 ? 500 : 350);
+    const acceleration = difference / (size.width! > 1200 ? 450 : size.width! );
     const velocity = +acceleration;
     const skew = velocity * 7.5;
 
@@ -75,7 +74,7 @@ const ScrollContainer = ({ children }: Props) => {
       <div
         ref={scrollContainer}
         style={{
-          transform: `translate3d(0, -${state.scroll}px, 0) skewY(${state.skew}deg)`,
+          transform: `translate3d(0, -${state.scroll}px, 0)`,
         }}
       >
         {children}
