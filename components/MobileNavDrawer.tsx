@@ -30,7 +30,7 @@ function MobileNavDrawer({ open, setOpen, page, setPage }: Props) {
           >
             <CloseRoundedIcon
               fontSize="large"
-              className="text-white dark:text-black"
+              className="text-white"
             />
           </ButtonBase>
         </div>
