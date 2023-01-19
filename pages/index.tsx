@@ -60,7 +60,6 @@ function index({ open, setOpen }: Props) {
                 <Image
                   src={require("../public/web/05.png")}
                   alt="bruhidk"
-                  priority
                 />
               </div>
               <p className="text-sm text-center pt-7 text-slate-600">
@@ -72,7 +71,6 @@ function index({ open, setOpen }: Props) {
                 <Image
                   src={require("../public/web/06.png")}
                   alt="bruhidk"
-                  priority
                 />
               </div>
               <p className="text-sm text-center pt-7 text-slate-600">
@@ -86,7 +84,6 @@ function index({ open, setOpen }: Props) {
               src={require("../public/web/003.png")}
               alt="idk"
               className="scale-150 md:scale-100 rounded-lg lg:-translate-x-14"
-              priority
             />
           </div>
           <p className="font-[400] text-center py-16 text-3xl">Interested?</p>

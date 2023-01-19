@@ -3,33 +3,38 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('../public/font/IBM_Plex_Sans/IBMPlexSans-Light.ttf') format('truetype');
-  font-weight: 300; 
+  font-family: "IBM Plex Sans";
+  src: url("../public/font/IBM_Plex_Sans/IBMPlexSans-Light.ttf")
+    format("truetype");
+  font-weight: 300;
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('../public/font/IBM_Plex_Sans/IBMPlexSans-Regular.ttf') format('truetype');
-  font-weight: 400; 
+  font-family: "IBM Plex Sans";
+  src: url("../public/font/IBM_Plex_Sans/IBMPlexSans-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('../public/font/IBM_Plex_Sans/IBMPlexSans-Medium.ttf') format('truetype');
-  font-weight: 500; 
+  font-family: "IBM Plex Sans";
+  src: url("../public/font/IBM_Plex_Sans/IBMPlexSans-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
-  src: url('../public/font/IBM_Plex_Sans/IBMPlexSans-Bold.ttf') format('truetype');
-  font-weight: 700; 
+  font-family: "IBM Plex Sans";
+  src: url("../public/font/IBM_Plex_Sans/IBMPlexSans-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Noto Sans Khmer';
-  src: url('../public/font/Noto_Sans_Khmer/NotoSansKhmer-VariableFont_wdth\,wght.ttf') format('truetype');
-  font-weight: 300; 
+  font-family: "Noto Sans Khmer";
+  src: url("../public/font/Noto_Sans_Khmer/NotoSansKhmer-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+  font-weight: 300;
 }
 
 html,
@@ -38,10 +43,15 @@ body {
   margin: 0;
   font-family: "IBM Plex Sans", sans-serif !important;
   font-weight: 300;
+  min-height: 100%;
+  height: auto;
 }
 
-html, body, * {
+html,
+body,
+* {
   overscroll-behavior: none;
+  scroll-behavior: initial;
 }
 
 a {
@@ -58,12 +68,11 @@ a {
 }
 
 .khmer {
-  font-family: 'Noto Sans Khmer';
+  font-family: "Noto Sans Khmer";
 }
 
-.scroll-container {
+/* .scroll-container {
   position: fixed;
   right: 0;
   left: 0;
-}
-
+} */

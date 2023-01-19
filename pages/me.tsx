@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
+import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 
 function me() {
   return (
@@ -30,7 +30,10 @@ function me() {
       <article className="font-[300] text-2xl leading-[3.5rem] px-8 md:px-20 lg:px-[12.5%] md:text-4xl lg:text-6xl xl:text-7xl lg:lead-[5rem] xl:leading-[8rem] my-16 lg:mt-28">
         Well, that&apos;s all I can think of right now, if you want to know more
         about me, you can contact me through this{" "}
-        <a href="https://t.me/rinyato" className="font-[400] underline underline-offset-4">
+        <a
+          href="https://t.me/rinyato"
+          className="font-[400] underline underline-offset-4"
+        >
           telegram
         </a>
         , I&apos;ll be happy to talk to you.
@@ -40,7 +43,8 @@ function me() {
       </article>
       <div className="flex justify-center font-[300] text-2xl leading-[3.5rem] px-8 md:px-20 lg:px-[12.5%] md:text-4xl lg:text-6xl xl:text-7xl lg:lead-[5rem] xl:leading-[8rem] lg:mt-28 pb-28 lg:pb-52">
         <a href="https://t.me/rinyato" className="underline underline-offset-8">
-          My Telegram <ArrowForwardOutlinedIcon className="animate-pulse text-2xl pb-1 md:text-4xl lg:text-6xl xl:text-7xl"/>
+          My Telegram{" "}
+          <ArrowForwardOutlinedIcon className="animate-pulse text-2xl pb-1 md:text-4xl lg:text-6xl xl:text-7xl" />
         </a>
       </div>
     </div>

@@ -12,7 +12,6 @@ interface Props {
 }
 
 function MobileNav({ open, setOpen, page, setPage }: Props) {
-
   return (
     <div className="md:hidden lg:hidden">
       <ButtonBase className="rounded-full p-0.5" onClick={() => setOpen(true)}>
@@ -23,9 +22,9 @@ function MobileNav({ open, setOpen, page, setPage }: Props) {
           <MobileNavDrawer
             open={open}
             setOpen={setOpen}
-            key={ "MobileNavDrawer" }
-            page={ page }
-            setPage={ setPage }
+            key={"MobileNavDrawer"}
+            page={page}
+            setPage={setPage}
           />
         )}
       </AnimatePresence>
