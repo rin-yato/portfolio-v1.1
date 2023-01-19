@@ -44,8 +44,8 @@ export default function App({ Component, pageProps }: AppProps) {
       smooth: true,
       mouseMultiplier: 1,
       smoothTouch: true,
-      touchMultiplier: 2,
-      infinite: false,
+      touchMultiplier: 1,
+      infinite: true,
     });
 
     //get scroll value
