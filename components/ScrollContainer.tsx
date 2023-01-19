@@ -54,7 +54,7 @@ const ScrollContainer = ({ children }: Props) => {
 
     // Difference between
     const difference = data.current - data.rounded;
-    const acceleration = difference / (size.width! > 1200 ? 450 : size.width! );
+    const acceleration = difference / (size.width! > 1200 ? 450 : size.width!);
     const velocity = +acceleration;
     const skew = velocity * 7.5;
 
