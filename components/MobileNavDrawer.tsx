@@ -9,17 +9,16 @@ import Transition from "../FramerMotion/Transition";
 interface Props {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  page: string;
-  setPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function MobileNavDrawer({ open, setOpen, page, setPage }: Props) {
+function MobileNavDrawer({ open, setOpen }: Props) {
   return (
     <motion.div
       initial="initial"
       animate="animate"
       exit="exit"
       variants={Animation.NavBarDrawer}
+      data-scroll-section
       className={`bg-black fixed top-0 bottom-0 left-0 right-0 z-50 pb-16 dark:bg-white h-screen`}
     >
       <div className="flex flex-col px-7 py-7 h-full">
@@ -28,10 +27,7 @@ function MobileNavDrawer({ open, setOpen, page, setPage }: Props) {
             className="rounded-full p-0.5 z-30"
             onClick={() => setOpen(false)}
           >
-            <CloseRoundedIcon
-              fontSize="large"
-              className="text-white"
-            />
+            <CloseRoundedIcon fontSize="large" className="text-white" />
           </ButtonBase>
         </div>
         <motion.div
@@ -44,7 +40,6 @@ function MobileNavDrawer({ open, setOpen, page, setPage }: Props) {
                 href={"/"}
                 onClick={() => {
                   setOpen(false);
-                  setPage("home");
                 }}
               >
                 Home
@@ -57,7 +52,6 @@ function MobileNavDrawer({ open, setOpen, page, setPage }: Props) {
                 href={"/me"}
                 onClick={() => {
                   setOpen(false);
-                  setPage("me");
                 }}
               >
                 Me

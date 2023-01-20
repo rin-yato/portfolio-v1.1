@@ -4,10 +4,11 @@ import Header from "../components/Header";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import Preloader from "../components/Preloader";
 import Head from "next/head";
 import useLocomotiveScroll from "../hooks/useLocomotiveScroll";
 import "locomotive-scroll/src/locomotive-scroll.scss";
+import MobileNavDrawer from "../components/MobileNavDrawer";
+import Preloader from "../components/Preloader";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -16,14 +17,14 @@ export default function App({ Component, pageProps }: AppProps) {
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  const [locomotiveRef] = useLocomotiveScroll({
+  const [locomotiveScrollRef] = useLocomotiveScroll({
     ref: scrollRef,
     smooth: true,
   });
 
   useEffect(() => {
-    locomotiveRef?.update();
-  }, [router.route, router.asPath, router.isReady, router.reload]);
+    locomotiveScrollRef?.update();
+  }, [router.route, router.asPath, router.isReady, router.reload, loading]);
 
   const FramerMotionPageTransition = {
     initial: {
@@ -37,12 +38,6 @@ export default function App({ Component, pageProps }: AppProps) {
     },
   };
 
-  useEffect(() => {
-    open
-      ? document.body.classList.add("overflow-hidden")
-      : document.body.classList.remove("overflow-hidden");
-  }, [open]);
-
   return (
     <AnimatePresence mode="wait">
       <Head key={"head"}>
@@ -54,9 +49,17 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      {/* {loading && <Preloader loading={loading} setLoading={setLoading} />} */}
-      {/* <ScrollContainer> */}
       <div className={`bg-[#F6F6F6]`} ref={scrollRef} data-scroll-container>
+        <AnimatePresence>
+          {loading && <Preloader loading={loading} setLoading={setLoading} />}
+          {open && (
+            <MobileNavDrawer
+              open={open}
+              setOpen={setOpen}
+              key={"MobileNavDrawer"}
+            />
+          )}
+        </AnimatePresence>
         <Header open={open} setOpen={setOpen} />
         <motion.div
           key={router.route}

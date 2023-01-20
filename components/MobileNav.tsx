@@ -17,17 +17,6 @@ function MobileNav({ open, setOpen, page, setPage }: Props) {
       <ButtonBase className="rounded-full p-0.5" onClick={() => setOpen(true)}>
         <DragHandleRoundedIcon fontSize="large" />
       </ButtonBase>
-      <AnimatePresence>
-        {open && (
-          <MobileNavDrawer
-            open={open}
-            setOpen={setOpen}
-            key={"MobileNavDrawer"}
-            page={page}
-            setPage={setPage}
-          />
-        )}
-      </AnimatePresence>
     </div>
   );
 }

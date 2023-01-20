@@ -51,7 +51,7 @@ function index({ open, setOpen }: Props) {
               data-scroll-speed="8"
               data-scroll-delay="0.5"
             />
-            <span className="absolute inset-0 flex justify-center items-center">
+            <span className="hidden md:flex absolute inset-0  justify-center items-center">
               <h3 className="text-8xl py-3 px-7 rounded-md font-semibold text-[#F6F6F6] uppercase backdrop-invert">
                 website with style
               </h3>

@@ -32,6 +32,7 @@ const useLocomotiveScroll = ({
       locomotiveScrollRef?.destroy();
     };
   }, [ref]);
+  
   return [locomotiveScrollRef];
 };
 export default useLocomotiveScroll;
