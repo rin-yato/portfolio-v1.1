@@ -1,19 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import LocomotiveScroll, {
-  LocomotiveScrollOptions,
-  Scroll,
-} from "locomotive-scroll";
+import Scroll from "locomotive-scroll";
 
 type UseLocomotiveScrollHook = [Scroll | null];
-
-type Props = {
-  ref: React.RefObject<Element>;
-} & Omit<LocomotiveScrollOptions, "el">;
 
 const useLocomotiveScroll = ({
   ref,
   smooth,
-}: Props): UseLocomotiveScrollHook => {
+  ...options
+}: any): UseLocomotiveScrollHook => {
   const [locomotiveScrollRef, setRef] = useState<Scroll | null>(null);
 
   useEffect(() => {
@@ -28,6 +22,7 @@ const useLocomotiveScroll = ({
           },
           tablet: {
             smooth: true,
+            breakpoint: 1024,
           },
         });
         setRef(scroll);

@@ -5,7 +5,7 @@ function Me() {
   
 
   return (
-    <div className="pt-16" data-scroll-section>
+    <div className="pt-16" data-scroll-section data-scroll>
       <h1
         data-scroll
         className="text font-[300] text-2xl leading-[3.5rem] px-8 md:px-20 lg:px-[12.5%] md:text-4xl lg:text-6xl xl:text-7xl lg:lead-[5rem] xl:leading-[8rem] my-16 lg:mt-28"
