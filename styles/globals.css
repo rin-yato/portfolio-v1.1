@@ -69,14 +69,9 @@ a {
   font-family: "Noto Sans Khmer";
 }
 
-/* .scroll-container {
-  position: fixed;
-  right: 0;
-  left: 0;
-} */
-
 [data-scroll-container] {
   position: fixed;
   right: 0;
   left: 0;
 }
+

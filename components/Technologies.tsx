@@ -2,7 +2,7 @@ import React from "react";
 
 function Technologies() {
   return (
-    <div className="px-8 md:px-20 lg:px-0 my-10">
+    <div className="px-8 md:px-20 lg:px-0 my-10" data-scroll>
       <div className="flex flex-col">
         <h2 className="font-[400] text-sm mb-5 uppercase tracking-wider">
           What I work With <span className="text-indigo-600">:</span>

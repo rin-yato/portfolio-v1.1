@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     locomotiveRef?.update();
-  }, [router.route]);
+  }, [router.route, router.asPath, router.isReady, router.reload]);
 
   const FramerMotionPageTransition = {
     initial: {

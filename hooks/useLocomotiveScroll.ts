@@ -22,14 +22,13 @@ const useLocomotiveScroll = ({
         const scroll = new locomotiveModule.default({
           el: ref.current,
           smooth,
-          lerp: 0.05,
+          lerp: 0.07,
           smartphone: {
             smooth: true,
           },
           tablet: {
             smooth: true,
           },
-          // scrollbarContainer: ref.current,
         });
         setRef(scroll);
       });
