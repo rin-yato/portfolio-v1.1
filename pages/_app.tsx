@@ -13,7 +13,7 @@ import Preloader from "../components/Preloader";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
