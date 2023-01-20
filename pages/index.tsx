@@ -31,7 +31,7 @@ function index({ open, setOpen }: Props) {
       </section>
       <section className="mt-36" data-scroll-section>
         <div
-          className="lg:flex lg:justify-between lg:items-center  lg:px-28 xl:px-[15%]"
+          className="lg:flex lg:justify-between lg:items-center lg:px-28 xl:px-[15%]"
           data-scroll
         >
           <IntroToDK />
@@ -42,18 +42,26 @@ function index({ open, setOpen }: Props) {
             data-scroll
             className="lg:w-10/12 py-16 mt-28 lg:mx-auto overflow-hidden relative"
           >
-            <Image
-              src={require("../public/web/002.png")}
-              alt="idk"
-              className="scale-150 md:scale-100"
-              priority
-              data-scroll
-              data-scroll-speed="8"
-              data-scroll-delay="0.5"
-            />
-            <span className="hidden md:flex absolute inset-0  justify-center items-center">
-              <h3 className="text-8xl py-3 px-7 rounded-md font-semibold text-[#F6F6F6] uppercase backdrop-invert">
-                website with style
+            <div className="-translate-x-[32%] md:translate-x-0">
+              <Image
+                src={require("../public/web/002.png")}
+                alt="idk"
+                className="min-w-[600px] md:min-w-full"
+                priority
+                data-scroll
+                data-scroll-speed="-10"
+              />
+            </div>
+            <span className="flex absolute inset-0  justify-center items-center">
+              <h3
+                data-scroll
+                data-scroll-speed="10"
+                className="text-7xl text-center md:text-9xl py-3 px-7 rounded-md font-semibold text-sky-200 uppercase mix-blend-difference"
+              >
+                website with <br></br>{" "}
+                <span className="text-9xl md:text-[12rem] text-yellow-200 mix-blend-color-dodge">
+                  style
+                </span>
               </h3>
             </span>
           </div>
