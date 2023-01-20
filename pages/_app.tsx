@@ -6,12 +6,24 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import Preloader from "../components/Preloader";
 import Head from "next/head";
-import ScrollContainer from "../components/ScrollContainer";
+import useLocomotiveScroll from "../hooks/useLocomotiveScroll";
+import "locomotive-scroll/src/locomotive-scroll.scss";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
+
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const [locomotiveRef] = useLocomotiveScroll({
+    ref: scrollRef,
+    smooth: true,
+  });
+
+  useEffect(() => {
+    locomotiveRef?.update();
+  }, [router.route]);
 
   const FramerMotionPageTransition = {
     initial: {
@@ -32,31 +44,31 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [open]);
 
   return (
-    <AnimatePresence mode="sync">
-      {loading && <Preloader loading={loading} setLoading={setLoading} />}
-      <ScrollContainer>
-        <div className={`bg-[#F6F6F6]`}>
-          <Header open={open} setOpen={setOpen} />
-          <Head key={"head"}>
-            <title>RinYato | Portfolio</title>
-            <meta name="description" content="rinyato portfolio" />
-            <meta
-              name="content"
-              content="rinyato, web developer, web designer, UI/UX, cambodia, khmer"
-            />
-            <link rel="icon" href="/favicon.png" />
-          </Head>
-          <motion.div
-            key={router.route}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            variants={FramerMotionPageTransition}
-          >
-            <Component {...pageProps} />
-          </motion.div>
-        </div>
-      </ScrollContainer>
+    <AnimatePresence mode="wait">
+      <Head key={"head"}>
+        <title>RinYato | Portfolio</title>
+        <meta name="description" content="rinyato portfolio" />
+        <meta
+          name="content"
+          content="rinyato, web developer, web designer, UI/UX, cambodia, khmer"
+        />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      {/* {loading && <Preloader loading={loading} setLoading={setLoading} />} */}
+      {/* <ScrollContainer> */}
+      <div className={`bg-[#F6F6F6]`} ref={scrollRef} data-scroll-container>
+        <Header open={open} setOpen={setOpen} />
+        <motion.div
+          key={router.route}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={FramerMotionPageTransition}
+        >
+          <Component {...pageProps} />
+        </motion.div>
+      </div>
+      {/* </ScrollContainer> */}
     </AnimatePresence>
   );
 }

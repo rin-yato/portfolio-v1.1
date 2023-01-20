@@ -17,17 +17,17 @@ interface Props {
 
 function index({ open, setOpen }: Props) {
   return (
-    <main className={`pb-20  ${open ? "overflow-hidden h-screen" : ""}`}>
-      <section className="lg:px-28 xl:px-[15%]">
+    <main className={`pb-20  ${open ? "overflow-hidden h-screen" : ""}`} data-scroll-section>
+      <section className="lg:px-28 xl:px-[15%]" data-scroll>
         <HeroText />
       </section>
-      <section className="flex flex-col mt-36 lg:flex-row lg:justify-between lg:px-14 xl:px-[15%]">
+      <section className="flex flex-col mt-36 lg:flex-row lg:justify-between lg:px-14 xl:px-[15%]" data-scroll>
         <RecentAccomplishments />
         <Experiences />
         <Technologies />
       </section>
-      <section className="mt-36">
-        <div className="lg:flex lg:justify-between lg:items-center  lg:px-28 xl:px-[15%]">
+      <section className="mt-36" data-scroll>
+        <div className="lg:flex lg:justify-between lg:items-center  lg:px-28 xl:px-[15%]" >
           <IntroToDK />
           <DKTechnologies />
         </div>
