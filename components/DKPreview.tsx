@@ -8,7 +8,7 @@ function DKPreview() {
       data-scroll
     >
       <div className="mt-24 relative z-10">
-        <div className=" rounded-md ">
+        <div className="relative rounded-md ">
           <Image
             src={require("../public/web/03.png")}
             alt="AllSneakerImage"
@@ -17,7 +17,7 @@ function DKPreview() {
             data-scroll-speed="10"
           />
         </div>
-        <span className="bg-slate-200 w-screen h-4/5 absolute top-1/2 right-1/3 lg:top-1/3 lg:left-2/3 -z-[2]"></span>
+        <span className="bg-zinc-200 w-screen h-4/5 absolute top-1/2 right-1/3 lg:top-1/3 lg:left-2/3 -z-[2]"></span>
       </div>
       <div className=" rounded-md mt-24 lg:mt-36 z-10 relative">
         <Image
