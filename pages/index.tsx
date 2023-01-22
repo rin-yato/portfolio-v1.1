@@ -58,10 +58,8 @@ function index({ open, setOpen }: Props) {
                 data-scroll-speed="10"
                 className="text-7xl text-center md:text-9xl py-3 px-7 rounded-md font-semibold text-white uppercase mix-blend-difference"
               >
-                website with <br></br>{" "}
-                <span className="text-9xl md:text-[12rem] text-white mix-blend-difference">
-                  style
-                </span>
+                website with <br></br>
+                style
               </h3>
             </span>
           </div>
