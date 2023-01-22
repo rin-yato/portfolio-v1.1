@@ -14,7 +14,7 @@ function DKPreview() {
             alt="AllSneakerImage"
             priority
             data-scroll
-            data-scroll-speed="10"
+            data-scroll-speed="16"
           />
         </div>
         <span className="bg-zinc-200 w-screen h-4/5 absolute top-1/2 right-1/3 lg:top-1/3 lg:left-2/3 -z-[2]"></span>
@@ -25,7 +25,7 @@ function DKPreview() {
           alt="HomeImage"
           priority
           data-scroll
-          data-scroll-speed="7"
+          data-scroll-speed="10"
         />
       </div>
       <div className="mt-24 relative lg:mt-52 z-10">

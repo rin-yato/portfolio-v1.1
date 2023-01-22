@@ -40,7 +40,7 @@ function index({ open, setOpen }: Props) {
         <div>
           <div
             data-scroll
-            className="lg:w-10/12 py-16 mt-28 lg:mx-auto overflow-hidden relative"
+            className="py-16 mt-28 lg:mx-auto overflow-hidden relative bg-white"
           >
             <div className="-translate-x-[32%] md:translate-x-0">
               <Image
@@ -56,10 +56,10 @@ function index({ open, setOpen }: Props) {
               <h3
                 data-scroll
                 data-scroll-speed="10"
-                className="text-7xl text-center md:text-9xl py-3 px-7 rounded-md font-semibold text-sky-200 uppercase mix-blend-difference"
+                className="text-7xl text-center md:text-9xl py-3 px-7 rounded-md font-semibold text-white uppercase mix-blend-difference"
               >
                 website with <br></br>{" "}
-                <span className="text-9xl md:text-[12rem] text-yellow-200 mix-blend-color-dodge">
+                <span className="text-9xl md:text-[12rem] text-white mix-blend-difference">
                   style
                 </span>
               </h3>

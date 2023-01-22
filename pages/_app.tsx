@@ -13,7 +13,7 @@ import Preloader from "../components/Preloader";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [open, setOpen] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -25,6 +25,14 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     locomotiveScrollRef?.update();
   }, [router.route, router.asPath, router.isReady, router.reload, loading]);
+
+  useEffect(() => {
+    if (loading || open) {
+      locomotiveScrollRef?.stop();
+    } else {
+      locomotiveScrollRef?.start();
+    }
+  }, [loading, open]);
 
   const FramerMotionPageTransition = {
     initial: {
@@ -39,7 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <AnimatePresence mode="wait">
+    <main>
       <Head key={"head"}>
         <title>RinYato | Portfolio</title>
         <meta name="description" content="rinyato portfolio" />
@@ -61,17 +69,23 @@ export default function App({ Component, pageProps }: AppProps) {
           )}
         </AnimatePresence>
         <Header open={open} setOpen={setOpen} />
-        <motion.div
-          key={router.route}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          variants={FramerMotionPageTransition}
-        >
-          <Component {...pageProps} />
-        </motion.div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={router.route}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            onAnimationComplete={() => {
+              locomotiveScrollRef?.update();
+            }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            variants={FramerMotionPageTransition}
+          >
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
       </div>
       {/* </ScrollContainer> */}
-    </AnimatePresence>
+    </main>
   );
 }
