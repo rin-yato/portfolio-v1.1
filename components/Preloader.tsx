@@ -20,9 +20,7 @@ function Preloader({ loading, setLoading }: Props) {
 
   React.useEffect(() => {
     if (loadingTime === 100) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1300);
+      setLoading(false);
     }
   }, [loadingTime]);
 
@@ -35,10 +33,11 @@ function Preloader({ loading, setLoading }: Props) {
       <motion.div>
         <div className={`text-white text-5xl py-10 overflow-hidden`}>
           <motion.div
-            initial={{ y: "200%", skewY: 10 }}
+            initial={{ y: "230%", skewY: 10 }}
             animate={{
               y: 0,
               skewY: 0,
+              transition: { delay: 0.7 },
             }}
             exit={{
               y: "230%",
@@ -55,6 +54,7 @@ function Preloader({ loading, setLoading }: Props) {
             animate={{
               y: 0,
               skewY: 0,
+              transition: { delay: 1 },
             }}
             exit={{
               y: "200%",
