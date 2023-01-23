@@ -58,7 +58,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className={`bg-[#F6F6F6]`} ref={scrollRef} data-scroll-container>
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {loading && <Preloader loading={loading} setLoading={setLoading} />}
           {open && (
             <MobileNavDrawer
