@@ -19,11 +19,5 @@ pipeline {
       }
     }
 
-    stage('Start') {
-      steps {
-        sh 'yarn start'
-      }
-    }
-
   }
 }
