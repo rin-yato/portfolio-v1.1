@@ -19,13 +19,6 @@ pipeline {
       }
     }
 
-    stage('Stop & Kill') {
-      steps {
-        sh '''pm2 stop --name portfolio
-pm2 kill --name portfolio'''
-      }
-    }
-
     stage('Start') {
       steps {
         sh 'pm2 start yarn --name portfolio -- start'
