@@ -4,6 +4,7 @@ pipeline {
     stage('Cloning Project') {
       steps {
         sh '''cd /home/rinyato/portfolio-v1.1
+git config --global --add safe.directory /home/rinyato/portfolio-v1.1
 git pull origin main --force'''
       }
     }
