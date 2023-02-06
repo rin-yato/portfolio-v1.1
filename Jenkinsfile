@@ -21,7 +21,7 @@ pipeline {
 
     stage('Start') {
       steps {
-        sh 'sudo pm2 start yarn --name portfolio1 -- start'
+        sh 'pm2 start yarn --name portfolio1 -- start'
       }
     }
 
