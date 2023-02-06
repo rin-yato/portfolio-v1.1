@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Cloning Project') {
       steps {
-        git(url: 'https://github.com/rin-yato/portfolio-v1.1.git', branch: 'main')
+        sh '''cd /home/rinyato/portfolio-v1.1
+git pull origin main --force'''
       }
     }
 
