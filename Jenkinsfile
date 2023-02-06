@@ -24,7 +24,8 @@ git config --global --add safe.directory /home/rinyato/portfolio-v1.1
 
     stage('Start') {
       steps {
-        sh 'pm2 start yarn --name portfolio1 -- start'
+        sh '''cd /home/rinyato/portfolio-v1.1
+pm2 start yarn --name portfolio1 -- start'''
       }
     }
 
