@@ -5,7 +5,8 @@ pipeline {
       steps {
         sh '''cd /home/rinyato/portfolio-v1.1
 git config --global --add safe.directory /home/rinyato/portfolio-v1.1
-git pull origin main --force'''
+'''
+        git(url: 'https://github.com/rin-yato/portfolio-v1.1.git', branch: 'main')
       }
     }
 
