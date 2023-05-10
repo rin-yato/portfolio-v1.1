@@ -49,7 +49,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main>
       <Head key={"head"}>
-        <title>RinYato | Portfolio jenkins</title>
+        <title>RinYato | Portfolio</title>
         <meta name="description" content="rinyato portfolio" />
         <meta
           name="content"
