@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { useEffect, useRef, useState } from "react";
 import Scroll from "locomotive-scroll";
 
