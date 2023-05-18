@@ -12,7 +12,7 @@ function Experiences() {
           <h3>Full Stack Dev</h3>
           <h3>NFT contract and Minting Site</h3>
           <h3>React Three Fiber</h3>
-          <h3>Building a portfolio</h3>
+          <h3>UI vs UX</h3>
         </div>
       </div>
     </div>
