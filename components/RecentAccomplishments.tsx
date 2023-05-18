@@ -8,10 +8,10 @@ function RecentAccomplishments() {
           Recent Accomplishments <span className="text-indigo-600">:</span>
         </h2>
         <div className="flex flex-col gap-4 text-sm text-slate-600 capitalize">
-          <h3>Learnt Typescript</h3>
-          <h3>Built DailyKicks website</h3>
-          <h3>Next.js and Framer Motion</h3>
-          <h3>Nuxt.js and TailwindCss</h3>
+          <h3>Finished Typescript Advanced Topic</h3>
+          <h3>Deep Dive into Mobile Development</h3>
+          <h3>Team Lead for Frontend Development</h3>
+          <h3>Devops with docker</h3>
         </div>
       </div>
     </div>
